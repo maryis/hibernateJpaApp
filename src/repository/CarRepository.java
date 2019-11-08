@@ -80,7 +80,7 @@ public class CarRepository implements CarRepositoryIX {
 //
 //        Our handcrafted test-JEE container does not clear the persistence context in this particular case. Further more the DB initialization code did not set both sides of the bidirectional relation between Bp and BpHistorisert. This caused the entity manager to work with the a broken Bp to BpHistorisert relation from the persistence context instead of reading everything from scratch from the DB
 
-        //it does nit work because of above descriptions
+        //it does not work because of above descriptions
         List<Person> p = em.createQuery("select p from person p join fetch p.cars c where p.id=:id").setParameter("id", pid).getResultList();
         if (p.size() > 0)
             return p.get(0).getCars();

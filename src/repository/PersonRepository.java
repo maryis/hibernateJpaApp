@@ -8,8 +8,8 @@ import javax.persistence.Query;
 import java.util.List;
 
 public class PersonRepository implements PersonRepositoryIX {
-    //hql: existed in pure hibernate. now it is depricated
-    //jpql: java persistence query language :  very similar to SQL (join,having,order
+    //hql: existed in pure hibernate. now it is deprecated
+    //jpql: java persistence query language :  very similar to SQL (join,having,order)
     // A JPQL query is always a valid HQL query, the reverse is not true however.
 
     private EntityManager em;

@@ -13,13 +13,11 @@ import java.util.List;
 
 public class Person {
 
+    @SequenceGenerator(name = "myGenerator", sequenceName = "mySeq", initialValue = 1, allocationSize = 1, schema = "amirsam")//allocationSize=increment by
+
     @Id
     @Column(name = "id", updatable = false, nullable = false) //optional for same name
-
     // @GeneratedValue(strategy = GenerationType.AUTO)//lets the persistence provider choose the generation strategy.if pp is JPAHibernate, for most popular DBs strategy=Sequence will be selecte
-    // Long id;
-
-    @SequenceGenerator(name = "myGenerator", sequenceName = "mySeq", initialValue = 1, allocationSize = 1, schema = "amirsam")//allocationSize=increment by
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "myGenerator")//if no sequence_generator mentioned, it uses the default sq
     private Long id;
 
