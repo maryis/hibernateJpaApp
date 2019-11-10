@@ -1,8 +1,9 @@
 we can define one persistence-unit for each db that we have in our persistence.xml
 when we have two persistence-unit we should use @PersistenceContext(unitName="...") (in spring of course :))
------------      -----handling relations ------------------
+----------------handling relations ------------------
 I use OneToMany relations always with cascadeAll,fetch Lazy
 and then I use namedQuery with join fetch to get an entity with its dependencies
+in this projects in the folder entity, files x1 shows tested bidirectional entities
 -------   ------jpa methods on EntityManager-----------------------------
 detach
 persist
